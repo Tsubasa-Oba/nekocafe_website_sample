@@ -18,10 +18,20 @@ Route::get('/nekocafe',
     App\Http\Controllers\Nekocafe\IndexController::class)
     ->name('nekocafe.index');
 
-// Route::post('/nekocafe/cats',App\Http\Controllers\Nekocafe\CreateController::class);
-// Route::put('/nekocafe/cats/{id}',App\Http\Controllers\Nekocafe\PutController::class)->where('id', '[0-9]+');
-// Route::delete('/nekocafe/cats/{id}',App\Http\Controllers\Nekocafe\DeleteController::class)->where('id', '[0-9]+');
+Route::get('/nekocafe/cats',
+    App\Http\Controllers\Nekocafe\ProfController::class)
+    ->name('nekocafe.prof');
 
+Route::get('/nekocafe/access',
+    App\Http\Controllers\Nekocafe\MapController::class)
+    ->name('nekocafe.map');
+
+Route::get('/nekocafe/contact',
+    App\Http\Controllers\Nekocafe\Contact\IndexController::class)
+    ->name('nekocafe.contact.index');
+
+
+    
 
 // 管理者画面
 Route::get('/nekocafe/administrator/cats',

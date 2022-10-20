@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Nekocafe;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class MapController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -15,13 +15,6 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $topUrl = [
-            'catsUrl' =>route('nekocafe.prof'),
-            'mapUrl' =>route('nekocafe.map'),
-            'contactUrl' =>route('nekocafe.contact.index')
-        ];
-        
-        return view('nekocafe.index')
-        ->with('top',$topUrl );
+        return view('nekocafe.index');
     }
 }
