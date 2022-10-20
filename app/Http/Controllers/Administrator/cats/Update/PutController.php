@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Http\Controllers\Administrator\cats\Update;
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Administrator\cats\CatsRequest;
+use App\Models\Cat;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+
+
+class PutController extends Controller
+{
+    /**
+     * Handle the incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke(CatsRequest $request)
+    {
+        $cat = Cat::where('id', $request->id())->firstOrFail();
+
+        DB::transaction( function () use($request, $cat) {
+            $cat->name = $request->input('name');
+            $cat->birthday = $request->input('birthday');
+
+            if ( !is_null($cat->photo_URL) ) {
+                Storage::disk('public')->delete('images/' . $cat->photo_URL);
+            }
+    
+            $cat->photo_URL = $request->file('photo_URL')->hashName();
+            $cat->Instagram_URL = $request->input('Instagram_URL');
+            $cat->save();
+            Storage::putFile('public/images', $request->file('photo_URL'));                
+        });
+
+        return redirect()->route('administrator.cats.update.index', ['id' => $cat->id])
+        ->with('feedback.success', "プロフィールを編集しました");
+    }
+}
