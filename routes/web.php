@@ -14,45 +14,50 @@ use Illuminate\Support\Facades\Route;
 */
 
 // ユーザー画面
-Route::get('/nekocafe',
+Route::get('/',
     App\Http\Controllers\Nekocafe\IndexController::class)
     ->name('nekocafe.index');
 
-Route::get('/nekocafe/cats',
+Route::get('/cats',
     App\Http\Controllers\Nekocafe\ProfController::class)
     ->name('nekocafe.prof');
 
-Route::get('/nekocafe/access',
-    App\Http\Controllers\Nekocafe\MapController::class)
-    ->name('nekocafe.map');
 
-Route::get('/nekocafe/contact',
+//ユーザー問い合わせ画面    
+Route::get('/contact',
     App\Http\Controllers\Nekocafe\Contact\IndexController::class)
     ->name('nekocafe.contact.index');
 
+Route::post('/contact',
+    App\Http\Controllers\Nekocafe\Contact\ConfController::class)
+    ->name('nekocafe.contact.conf');
 
-    
+Route::post('/contact/send',
+    App\Http\Controllers\Nekocafe\Contact\SendController::class)
+    ->name('nekocafe.contact.send');
+
+
 
 // 管理者画面
-Route::get('/nekocafe/administrator/cats',
+Route::get('/administrator/cats',
     App\Http\Controllers\Administrator\cats\IndexController::class)
     ->name('administrator.cats.index');
 
-Route::post('/nekocafe/administrator/cats',
+Route::post('/administrator/cats',
     App\Http\Controllers\Administrator\cats\CreateController::class)
     ->name('administrator.cats.create');
 
-Route::get('/nekocafe/administrator/cats/updete/{id}',
+Route::get('/administrator/cats/updete/{id}',
     App\Http\Controllers\Administrator\cats\Update\IndexController::class)
     ->name('administrator.cats.update.index')
     ->where('id', '[0-9]+');
 
-Route::put('/nekocafe/administrator/cats/update/{id}',
+Route::put('/administrator/cats/update/{id}',
     App\Http\Controllers\Administrator\cats\Update\PutController::class)
     ->name('administrator.cats.update.put')
     ->where('id', '[0-9]+');
  
-Route::delete('/nekocafe/administrator/cats/delete/{id}',
+Route::delete('/administrator/cats/delete/{id}',
     App\Http\Controllers\Administrator\cats\Delete\DeleteController::class)
     ->name('administrator.cats.delete')
     ->where('id', '[0-9]+');

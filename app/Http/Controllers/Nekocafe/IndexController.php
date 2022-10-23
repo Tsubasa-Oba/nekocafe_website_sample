@@ -17,7 +17,6 @@ class IndexController extends Controller
     {
         $topUrl = [
             'catsUrl' =>route('nekocafe.prof'),
-            'mapUrl' =>route('nekocafe.map'),
             'contactUrl' =>route('nekocafe.contact.index')
         ];
         

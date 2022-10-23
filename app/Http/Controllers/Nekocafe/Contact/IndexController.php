@@ -15,6 +15,9 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('nekocafe.index');
+        $confUrl = route('nekocafe.contact.conf');
+
+        return view('nekocafe.form')
+        ->with('confUrl',$confUrl);
     }
 }
