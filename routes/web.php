@@ -37,8 +37,46 @@ Route::post('/contact/send',
     ->name('nekocafe.contact.send');
 
 
+// 管理者ログイン画面
+Route::get('/administrator/login',
+    App\Http\Controllers\Administrator\login\IndexController::class)
+    ->name('administrator.login.index');
+
+Route::post('/administrator/login',
+    App\Http\Controllers\Administrator\login\AuthController::class)
+    ->name('administrator.login');
+
+
+
 
 // 管理者画面
+
+// 管理者登録
+Route::get('/administrator/sign-up',
+    App\Http\Controllers\Administrator\signUp\IndexController::class)
+    ->name('administrator.signUp.index');
+
+Route::post('/administrator/sign-up',
+    App\Http\Controllers\Administrator\signUp\CreateController::class)
+    ->name('administrator.signUp.create');
+
+Route::get('/administrator/sign-up/updete/{id}',
+    App\Http\Controllers\Administrator\signUp\Update\IndexController::class)
+    ->name('administrator.signUp.update.index')
+    ->where('id', '[0-9]+');
+
+Route::put('/administrator/sign-up/updete/{id}',
+    App\Http\Controllers\Administrator\signUp\Update\PutController::class)
+    ->name('administrator.signUp.update.put')
+    ->where('id', '[0-9]+');
+
+Route::delete('/administrator/sign-up/delete/{id}',
+    App\Http\Controllers\Administrator\signUp\Delete\DeleteController::class)
+    ->name('administrator.signUp.delete')
+    ->where('id', '[0-9]+');
+
+
+// 猫プロフ登録
 Route::get('/administrator/cats',
     App\Http\Controllers\Administrator\cats\IndexController::class)
     ->name('administrator.cats.index');

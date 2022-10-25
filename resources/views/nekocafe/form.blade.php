@@ -41,10 +41,10 @@
                     <span class="required"></span>
                     </label>
                     <div>
-                        <input type="text" name="name1" value="{{ old('name1') }}" value style="ima-mode: active" placeholder="姓">
+                        <input type="text" name="name1" value="{{ old('name1') }}" placeholder="姓">
                     </div>
                     <div>
-                        <input type="text" name="name2" value="{{ old('name2') }}" value style="ima-mode: active" placeholder="名">
+                        <input type="text" name="name2" value="{{ old('name2') }}" placeholder="名">
                     </div>
                    
                 </div>
@@ -53,10 +53,10 @@
                     <label for="kana">フリガナ</label>
                         
                     <div>
-                        <input type="text" name="kana1" value style="ima-mode: active" placeholder="セイ">
+                        <input type="text" name="kana1" placeholder="セイ">
                     </div>
                     <div>
-                        <input type="text" name="kana2" value style="ima-mode: active" placeholder="メイ">
+                        <input type="text" name="kana2" placeholder="メイ">
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@
                     <span class="required"></span>
                     </label>
                     <div>
-                        <input type="text" name="email" value="{{ old('email') }}" value style="ima-mode: active" placeholder="メールアドレスを入力してください">
+                        <input type="text" name="email" value="{{ old('email') }}" placeholder="メールアドレスを入力してください">
                         
                     </div>                    
                 </div>
