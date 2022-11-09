@@ -3,9 +3,7 @@
 namespace App\Http\Controllers\Administrator\login;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Administrator\cats\CatsRequest;
-use App\Models\Cat;
-use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -15,37 +13,11 @@ class IndexController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(CatsRequest $request)
+    public function __invoke(Request $request)
     {
-        
-        // $cats = Cat::all();
-        $cats = Cat::paginate(1);
+        $authUrl = route('administrator.login');
 
-        $catsViewData = [];
-
-        foreach($cats as $cat){
-            $date = (new Carbon($cat->birthday))->format('Y年m月d日');
-            $catViewData = [
-                'name' => $cat->name,
-                'birthday' => $date,
-                'photo_URL' => asset('/storage/images/' . $cat->photo_URL),
-                'Instagram_URL' => $cat->Instagram_URL,
-                'editUrl' => route('administrator.cats.update.index', ['id' => $cat->id]),
-                'deleteUrl' => route('administrator.cats.delete', ['id' => $cat->id])
-            ];
-            $catsViewData[] = $catViewData;
-        }
-
-        $createUrl = route('administrator.cats.create');
-
-        $viewData = [
-            'catsViewData' => $catsViewData,
-            'createUrl' => $createUrl,
-            'allPaginates' => $cats->links('vendor.pagination.administratorCustom') 
-        ];
-
-        return view('administrator.cats.index')
-        ->with('indexViewData', $viewData);
-        
+        return view('administrator.login.index')
+        ->with('authUrl', $authUrl);       
     }
 }

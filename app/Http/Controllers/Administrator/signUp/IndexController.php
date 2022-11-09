@@ -27,7 +27,7 @@ class IndexController extends Controller
                 'name' => $admin->name,
                 'admin_id' => $admin->admin_id,
                 'admin_pass' => $admin->admin_pass,
-                'auth_type' => $admin->auth_type,
+                'type' => $admin->type,
                 'editUrl' => route('administrator.signUp.update.index', ['id' => $admin->id]),
                 'deleteUrl' => route('administrator.signUp.delete', ['id' => $admin->id])
             ];

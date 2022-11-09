@@ -41,11 +41,11 @@
             </label>
             <input type="password" name="admin_pass">
             <br>
-            <label for="auth_type">管理者権限
+            <label for="type">管理者権限
                 <span class="required"></span>
             </label>
-            <input type="radio" name="auth_type" value="admin">admin
-            <input type="radio" name="auth_type" value="basic">basic
+            <input type="radio" name="type" value="admin">admin
+            <input type="radio" name="type" value="basic">basic
            
             <button type="submit">登録</button>
         </form>
@@ -65,7 +65,7 @@
                 <th>{{ $adminViewData['name'] }}</th>
                 <th>{{ $adminViewData['admin_id'] }}</th>
                 <th>{{ $adminViewData['admin_pass'] }}</th>
-                <th>{{ $adminViewData['auth_type'] }}</th> 
+                <th>{{ $adminViewData['type'] }}</th> 
                 <th><a href="{{ $adminViewData['editUrl'] }}">編集</a><br>
                 <form action="{{ $adminViewData['deleteUrl'] }}" method="post">
                 @method('DELETE')

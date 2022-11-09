@@ -24,7 +24,7 @@ class PutController extends Controller
             $admin->name = $request->input('name');
             $admin->admin_id = $request->input('admin_id');
             $admin->admin_pass = $request->input('admin_pass');
-            $admin->auth_type = $request->input('auth_type');            
+            $admin->type = $request->input('type');            
             $admin->save();               
         });
 

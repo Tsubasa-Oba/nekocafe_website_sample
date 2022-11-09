@@ -42,20 +42,20 @@
             </label>
             <input type="password" name="admin_pass" value="{{ $updateViewData['admin_pass'] }}">
             <br>
-            <label for="auth_type">管理者権限
+            <label for="type">管理者権限
                 <span class="required"></span>
             </label>
             <input 
                 type="radio" 
-                name="auth_type" 
+                name="type" 
                 value="admin"
-                @if($updateViewData['auth_type'] == 'admin') checked @endif 
+                @if($updateViewData['type'] == 'admin') checked @endif 
             >admin
             <input 
                 type="radio" 
-                name="auth_type" 
+                name="type" 
                 value="basic"
-                @if($updateViewData['auth_type'] == 'basic') checked @endif
+                @if($updateViewData['type'] == 'basic') checked @endif
             >basic
            
             <button type="submit">編集</button>
