@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Administrator;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
-class IndexController extends Controller
+class LogoutController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -17,7 +18,14 @@ class IndexController extends Controller
     public function __invoke(Request $request)
     {
         
-        return view('administrator.home');
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect()->route('administrator.login.index')
+        ->with('logout', 'ログアウトしました');
         
     }
 }

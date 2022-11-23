@@ -24,7 +24,7 @@ class LoginFromRequest extends FormRequest
     public function rules()
     {
         return [
-            'admin_id' => 'required|string|max:255',
+            'admin_id' => 'required',
             'admin_pass' => 'required'
         ];
     }

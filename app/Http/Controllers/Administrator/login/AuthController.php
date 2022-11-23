@@ -29,14 +29,13 @@ class AuthController extends Controller
         'admin_id' => $request->admin_id,
         'password' => $request->admin_pass
         ];
-        dump('-----------------------100');
 
         if(Auth::attempt($credentials)) {
-            dump(Auth::check());
             $request->session()->regenerate();
-            dd(Auth::class);
-            return redirect()->route('administrator.home'); 
-            // return  view('administrator.home')->with('login_success', 'ログインに成功しました');
+            
+            return redirect()->route('administrator.home')->with('login_success', 'ログインに成功しました');
+                       
+            
         }
 
         return back()->withErrors([
