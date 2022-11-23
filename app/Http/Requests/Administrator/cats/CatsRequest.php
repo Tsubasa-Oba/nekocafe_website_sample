@@ -57,4 +57,14 @@ class CatsRequest extends FormRequest
         return $this->file('photo_URL');
     }
 
+    public function cats_type()
+    {
+        return $this->input('cats_type');
+    }
+
+    public function introduction()
+    {
+        return $this->input('introduction');
+    }
+
 }

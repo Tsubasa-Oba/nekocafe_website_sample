@@ -19,7 +19,7 @@ class IndexController extends Controller
     {
         
         // $cats = Cat::all();
-        $cats = Cat::paginate(1);
+        $cats = Cat::paginate(4);
 
         $catsViewData = [];
 
@@ -30,6 +30,8 @@ class IndexController extends Controller
                 'birthday' => $date,
                 'photo_URL' => asset('/storage/images/' . $cat->photo_URL),
                 'Instagram_URL' => $cat->Instagram_URL,
+                'cats_type' => $cat->cats_type,
+                'introduction' => $cat->introduction,
                 'editUrl' => route('administrator.cats.update.index', ['id' => $cat->id]),
                 'deleteUrl' => route('administrator.cats.delete', ['id' => $cat->id])
             ];
@@ -41,7 +43,7 @@ class IndexController extends Controller
         $viewData = [
             'catsViewData' => $catsViewData,
             'createUrl' => $createUrl,
-            'allPaginates' => $cats->links('vendor.pagination.administratorCustom') 
+            'allPaginates' => $cats->links('vendor.pagination.bootstrap-5') 
         ];
 
         return view('administrator.cats.index')

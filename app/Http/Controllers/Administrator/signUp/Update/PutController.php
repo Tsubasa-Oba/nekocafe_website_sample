@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 class PutController extends Controller
@@ -23,7 +24,8 @@ class PutController extends Controller
         DB::transaction( function () use($request, $admin) {
             $admin->name = $request->input('name');
             $admin->admin_id = $request->input('admin_id');
-            $admin->admin_pass = $request->input('admin_pass');
+            $admin->admin_pass = Hash::make($request->input('admin_pass'));
+            
             $admin->type = $request->input('type');            
             $admin->save();               
         });
