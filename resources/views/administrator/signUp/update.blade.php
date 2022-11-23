@@ -5,61 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猫カフェ にゃんこのおなか 管理者画面</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        .required::before {
-            content: "必須";
-            font-size: 11px;
-            color: #ffffff;
-            margin-right: 5px;
-            margin-left: 5px;
-            background: #b22222;
-            padding: 1px 6px;
-            border-radius: 4px;
-        }
+    .required::before {
+        content: "*";
+        font-size: 20px;
+        color: red;
+    }
+
+    body {
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+      }
+    .form-signin .form-floating:focus-within {
+        z-index: 2;
+      }
+
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      
+      #btn-layout {
+        display:inline-flex
+      }
+
     </style>
 </head>
 <body>
-    <h1>管理者情報編集</h1>
-    <a href="{{ $updateViewData['indexUrl'] }}">戻る＞</a><br>
+    <main class="form-signin">
+        <h1 class="mb-3 fw-normal text-center">管理者情報編集</h1>
+        <a href="{{ $updateViewData['indexUrl'] }}">戻る＞</a><br>
         @if (session('feedback.success'))
             <p style="color:green">{{ session('feedback.success') }}</p>
         @endif
-        <form action="{{ $updateViewData['editUrl'] }}" method="post">
-        @method('PUT')
-            @csrf
-            <label for="name">管理者名
-                <span class="required"></span>
-            </label>
-            <input type="text" name="name" value="{{ $updateViewData['name'] }}">
-            <br>
-            <label for="admin_id">管理者ID
-                <span class="required"></span>
-            </label>
-            <input type="text" name="admin_id" value="{{ $updateViewData['admin_id'] }}">
-            <br>
-            <label for="admin_pass">管理者パスワード
-                <span class="required"></span>
-            </label>
-            <input type="password" name="admin_pass" value="{{ $updateViewData['admin_pass'] }}">
-            <br>
-            <label for="type">管理者権限
-                <span class="required"></span>
-            </label>
-            <input 
-                type="radio" 
-                name="type" 
-                value="admin"
-                @if($updateViewData['type'] == 'admin') checked @endif 
-            >admin
-            <input 
-                type="radio" 
-                name="type" 
-                value="basic"
-                @if($updateViewData['type'] == 'basic') checked @endif
-            >basic
+        <div class="form-floating">
+            <form action="{{ $updateViewData['editUrl'] }}" method="post">
+            @method('PUT')
+                @csrf
+                <label for="name">管理者名
+                    <span class="required"></span>
+                </label>
+                <input type="text" name="name" value="{{ $updateViewData['name'] }}" class="form-control" id="floatingInput">
+                <br>
+                <label for="admin_id">管理者ID
+                    <span class="required"></span>
+                </label>
+                <input type="text" name="admin_id" value="{{ $updateViewData['admin_id'] }}" class="form-control" id="floatingInput">
+                <br>
+                <label for="admin_pass">管理者パスワード
+                    <span class="required"></span>
+                </label>
+                <input type="password" name="admin_pass" value="{{ $updateViewData['admin_pass'] }}" class="form-control" id="floatingInput">
+                <br>
+                <label for="type">管理者権限
+                    <span class="required"></span>
+                </label>
+                <input 
+                    type="radio" 
+                    name="type" 
+                    value="admin"
+                    @if($updateViewData['type'] == 'admin') checked @endif 
+                >admin
+                <input 
+                    type="radio" 
+                    name="type" 
+                    value="basic"
+                    @if($updateViewData['type'] == 'basic') checked @endif
+                >basic
            
-            <button type="submit">編集</button>
-        </form>
-    </div>
+                <button type="submit" class="mt-5 w-100 btn btn-lg btn-primary">編集</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
