@@ -22,7 +22,9 @@ class CreateController extends Controller
             $request->name(),
             $request->birthday(),
             $request->photo_URL(),
-            $request->Instagram_URL()
+            $request->Instagram_URL(),
+            $request->cats_type(),
+            $request->introduction()
         );
 
         return redirect()->route('administrator.cats.index');

@@ -3,49 +3,45 @@
 namespace App\Http\Controllers\Administrator\login;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Administrator\cats\CatsRequest;
-use App\Models\Cat;
-use Carbon\Carbon;
+use App\Http\Requests\Administrator\login\LoginFromRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Admin;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class AuthController extends Controller
 {
+    use AuthenticatesUsers;
     /**
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(CatsRequest $request)
+    public function __invoke(LoginFromRequest $request)
     {
-        
-        // $cats = Cat::all();
-        $cats = Cat::paginate(1);
+        //$credentials = $request->only('admin_id','admin_pass');
 
-        $catsViewData = [];
-
-        foreach($cats as $cat){
-            $date = (new Carbon($cat->birthday))->format('Y年m月d日');
-            $catViewData = [
-                'name' => $cat->name,
-                'birthday' => $date,
-                'photo_URL' => asset('/storage/images/' . $cat->photo_URL),
-                'Instagram_URL' => $cat->Instagram_URL,
-                'editUrl' => route('administrator.cats.update.index', ['id' => $cat->id]),
-                'deleteUrl' => route('administrator.cats.delete', ['id' => $cat->id])
-            ];
-            $catsViewData[] = $catViewData;
-        }
-
-        $createUrl = route('administrator.cats.create');
-
-        $viewData = [
-            'catsViewData' => $catsViewData,
-            'createUrl' => $createUrl,
-            'allPaginates' => $cats->links('vendor.pagination.administratorCustom') 
+        $credentials = [
+        'admin_id' => $request->admin_id,
+        'password' => $request->admin_pass
         ];
 
-        return view('administrator.cats.index')
-        ->with('indexViewData', $viewData);
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            
+            return redirect()->route('administrator.home')->with('login_success', 'ログインに成功しました');
+                       
+            
+        }
+
+        return back()->withErrors([
+            'login_error' => '管理者IDまたは管理者パスワードが間違っています。',
+        ]);
         
     }
+
 }

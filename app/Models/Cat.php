@@ -18,7 +18,9 @@ class Cat extends Model
         'name',
         'birthday',
         'photo_URL',
-        'Instagram_URL'
+        'Instagram_URL',
+        'cats_type',
+        'introduction'
     ];
 
     public function createCat($cat)
@@ -27,7 +29,9 @@ class Cat extends Model
             'name' => $cat->name,
             'birthday' => $cat->birthday,
             'photo_URL' => $cat->photo_URL,
-            'Instagram_URL' => $cat->Instagram_URL
+            'Instagram_URL' => $cat->Instagram_URL,
+            'cats_type' => $cat->cats_type,
+            'introduction' => $cat->introduction
         ]);
     }
 }

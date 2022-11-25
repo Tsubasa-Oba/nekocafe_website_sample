@@ -30,6 +30,14 @@ class SendController extends Controller
 
         $inputs = $request->except('action');
 
+        $viewData = [
+            'TOP' => route('nekocafe.index'),
+            'CONCEPT' => route('nekocafe.index') . '#CONCEPT', 
+            'CATS' => route('nekocafe.prof'),
+            'ACCESS' => route('nekocafe.index') . '#ACCESS',
+            'CONTACT' => route('nekocafe.contact.index')
+        ];
+
         //actionの値で分岐
         if($action !== 'submit'){
 
@@ -50,7 +58,7 @@ class SendController extends Controller
             $request->session()->regenerateToken();
 
             // 送信完了ページのviewを表示
-            return view('nekocafe.send');
+            return view('nekocafe.send') ->with('indexViewData', $viewData);
         }
     }
 }

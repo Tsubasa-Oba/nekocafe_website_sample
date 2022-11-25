@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name')->comment('管理者名');
             $table->string('admin_id')->unique()->comment('管理者ID');
             $table->string('admin_pass')->comment('管理者パスワード');
-            $table->set('auth_type', ['admin', 'basic'])->default('basic')->comment('管理者権限');
+            $table->set('type', ['admin', 'basic'])->default('basic')->comment('管理者権限');
             $table->timestamps();
         });
     }

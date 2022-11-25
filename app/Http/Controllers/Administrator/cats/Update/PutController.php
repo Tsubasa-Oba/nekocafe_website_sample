@@ -24,7 +24,8 @@ class PutController extends Controller
         DB::transaction( function () use($request, $cat) {
             $cat->name = $request->input('name');
             $cat->birthday = $request->input('birthday');
-            
+            $cat->cats_type = $request->input('cats_type');
+            $cat->introduction = $request->input('introduction');
             $requestPhoto = $request->file('photo_URL');
 
             if ( !is_null($cat->photo_URL) ) {
