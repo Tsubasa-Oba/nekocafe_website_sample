@@ -17,7 +17,7 @@ class ProfController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $cats = Cat::paginate(1);
+        $cats = Cat::paginate(8);
 
         $catsViewData = [];
 
@@ -28,6 +28,8 @@ class ProfController extends Controller
                 'birthday' => $date,
                 'photo_URL' => asset('/storage/images/' . $cat->photo_URL),
                 'Instagram_URL' => $cat->Instagram_URL,
+                'cats_type' => $cat->cats_type,
+                'introduction' => $cat->introduction,
             ];
             $catsViewData[] = $catViewData;
         }
@@ -35,7 +37,11 @@ class ProfController extends Controller
 
         $viewData = [
             'catsViewData' => $catsViewData,
-            'allPaginates' => $cats->links('vendor.pagination.administratorCustom') 
+            'allPaginates' => $cats->links('vendor.pagination.administratorCustom'),
+            'CONCEPT' => route('nekocafe.index') . '#CONCEPT', 
+            'CATS' => route('nekocafe.prof'),
+            'ACCESS' => route('nekocafe.index') . '#ACCESS',
+            'CONTACT' => route('nekocafe.contact.index')
         ];
 
         return view('nekocafe.prof')
