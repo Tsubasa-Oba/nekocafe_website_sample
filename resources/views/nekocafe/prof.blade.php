@@ -11,7 +11,7 @@
             <div class="l_container">
                 <div class="l_logo_nav">
                     <div class="l_left_logo">
-                        <a href=""><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>  
+                        <a href="{{  $indexViewData['TOP'] }}"><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>  
                     </div>      
                     <nav class="l_nav_right_container">
                         <ul class="p_nav l_nav_list">
@@ -33,7 +33,7 @@
     <div class="l_contents">    
         <div class="l_container">
             <div class="l_title" id="CATS">
-                <h2>CATS</h1>
+                <h2>CATS</h2>
                 <div class="l_sav_title">
                     <div class="f_sav_title">猫ちゃんプロフィール一覧</div>
                 </div>
@@ -74,7 +74,7 @@
     <div class="l_contents">
         <div class="l_container">
             <div class="l_footer f_footer_text">
-                <a href=""><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>
+                <a href="{{  $indexViewData['TOP'] }}"><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>
                 <div>住所：埼玉県所沢市○○○○</div>
                 <div>© 2022 Tsubasa_Oba</div>     
             </div>                          

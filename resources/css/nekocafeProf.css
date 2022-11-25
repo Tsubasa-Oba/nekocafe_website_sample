@@ -10,7 +10,7 @@
     justify-content: space-evenly;
  }
  
- .l_nav_right_container {
+.l_nav_right_container {
     padding: 15px 20px;
     display: flex;
     justify-content: space-evenly;
@@ -23,6 +23,7 @@
 
 .l_body {
     padding-top: 150px;
+    height: 100%;
 }
 
 .l_sav_title {

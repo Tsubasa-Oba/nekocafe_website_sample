@@ -28,9 +28,19 @@ class ConfController extends Controller
 
         $inputs = $request->all();
 
+        $viewData = [
+            'confUrl' => route('nekocafe.contact.conf'),
+            'TOP' => route('nekocafe.index'),
+            'CONCEPT' => route('nekocafe.index') . '#CONCEPT', 
+            'CATS' => route('nekocafe.prof'),
+            'ACCESS' => route('nekocafe.index') . '#ACCESS',
+            'CONTACT' => route('nekocafe.contact.index')
+        ];
+
         return view('nekocafe.conf',[
             'sendUrl' => $sendUrl,
-            'inputs' => $inputs
+            'inputs' => $inputs,
+            'indexViewData'=> $viewData
         ]);
     }
 }

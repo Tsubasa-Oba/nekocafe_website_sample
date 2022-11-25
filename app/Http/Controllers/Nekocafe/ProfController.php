@@ -38,6 +38,7 @@ class ProfController extends Controller
         $viewData = [
             'catsViewData' => $catsViewData,
             'allPaginates' => $cats->links('vendor.pagination.administratorCustom'),
+            'TOP' => route('nekocafe.index'),
             'CONCEPT' => route('nekocafe.index') . '#CONCEPT', 
             'CATS' => route('nekocafe.prof'),
             'ACCESS' => route('nekocafe.index') . '#ACCESS',
