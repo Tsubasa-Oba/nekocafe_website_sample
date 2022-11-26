@@ -55,6 +55,10 @@ Route::group(['middleware' => ['auth']], function () {
         App\Http\Controllers\Administrator\IndexController::class)
         ->name('administrator.home');
 
+    Route::post('/administrator/logaut',
+        App\Http\Controllers\Administrator\LogoutController::class)
+        ->name('administrator.logout');
+
 
 
     // 管理者画面
