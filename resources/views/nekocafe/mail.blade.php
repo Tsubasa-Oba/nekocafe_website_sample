@@ -5,7 +5,7 @@
 =====お問い合わせフォーム入力内容=====<br>
 <br>
 ■お名前<br>
-{{ $name1 }}{{ $name2 }}様<br>
+{{ $last_name }}{{ $first_name }}様<br>
 <br>
 ■メールアドレス<br>
 {{ $email }}<br>

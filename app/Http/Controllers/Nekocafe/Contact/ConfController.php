@@ -16,10 +16,10 @@ class ConfController extends Controller
     public function __invoke(Request $request)
     {
         $request->validate([
-            'name1' => 'required|string',
-            'name2' => 'required|string',
-            'kana1' => 'required|string',
-            'kana2' => 'required|string',
+            'last_name' => 'required|string',
+            'first_name' => 'required|string',
+            'last_name_kana' => 'required|string',
+            'first_name_kana' => 'required|string',
             'email' => 'required|email',
             'body' => 'required|string|max:255'
         ]);

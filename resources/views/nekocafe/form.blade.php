@@ -43,10 +43,10 @@
                                     </label>
                                     <div>
                                         <div>
-                                            <input type="text" name="name1" value="{{ old('name1') }}" placeholder="姓">
+                                            <input type="text" name="last_name" value="{{ old('last_name') }}" placeholder="姓">
                                         </div>
                                         <div>
-                                            <input type="text" name="name2" value="{{ old('name2') }}" placeholder="名">
+                                            <input type="text" name="first_name" value="{{ old('first_name') }}" placeholder="名">
                                         </div> 
                                     </div>                  
                                 
@@ -57,10 +57,10 @@
                                     </label>
                                     <div>
                                         <div>
-                                            <input type="text" name="kana1" placeholder="セイ">
+                                            <input type="text" name="last_name_kana" value="{{ old('last_name_kana') }}" placeholder="セイ">
                                         </div>
                                         <div>
-                                            <input type="text" name="kana2" placeholder="メイ">
+                                            <input type="text" name="first_name_kana"  value="{{ old('first_name_kana') }}" placeholder="メイ">
                                         </div>
                                     </div>
                                 

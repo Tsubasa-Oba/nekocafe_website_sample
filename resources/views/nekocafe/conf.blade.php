@@ -36,10 +36,10 @@
                     </label>
                     <div>
                         <div>
-                            <input type="text" name="name1" value="{{ $inputs['name1'] }}" type="hidden">
+                            <input type="text" name="last_name" value="{{ $inputs['last_name'] }}" type="hidden">
                         </div>
                         <div>
-                            <input type="text" name="name2" value="{{ $inputs['name2'] }}" type="hidden">
+                            <input type="text" name="first_name" value="{{ $inputs['first_name'] }}" type="hidden">
                         </div>
                     </div>                   
                 
@@ -47,10 +47,10 @@
                      
                     <div>
                         <div>
-                            <input type="text" name="kana1" value="{{ $inputs['kana1'] }}" type="hidden">
+                            <input type="text" name="last_name_kana" value="{{ $inputs['last_name_kana'] }}" type="hidden">
                         </div>
                         <div>
-                            <input type="text" name="kana2" value="{{ $inputs['kana2'] }}" type="hidden">
+                            <input type="text" name="first_name_kana" value="{{ $inputs['first_name_kana'] }}" type="hidden">
                         </div>
                     </div>
             
