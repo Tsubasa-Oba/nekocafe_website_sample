@@ -19,19 +19,19 @@ class ContactSendmail extends Mailable
      * @return void
      */
 
-    private $name1;
-    private $name2;
-    private $kana1;
-    private $kana2;
+    private $last_name;
+    private $first_name;
+    private $last_name_kana;
+    private $first_name_kana;
     private $email;
     private $body;
 
     public function __construct( $inputs )
     {
-        $this->name1 = $inputs['name1'];
-        $this->name2 = $inputs['name2'];
-        $this->kana1 = $inputs['kana1'];
-        $this->kana2 = $inputs['kana2'];
+        $this->last_name = $inputs['last_name'];
+        $this->first_name = $inputs['first_name'];
+        $this->last_name_kana = $inputs['last_name_kana'];
+        $this->first_name_kana = $inputs['first_name_kana'];
         $this->email = $inputs['email'];
         $this->body = $inputs['body'];
 
@@ -61,10 +61,10 @@ class ContactSendmail extends Mailable
         return new Content(
             view: 'nekocafe.mail',
             with: [
-                'name1' => $this->name1,
-                'name2' => $this->name2,
-                'kana1' => $this->kana1,
-                'kana2' => $this->kana2,
+                'last_name' => $this->last_name,
+                'first_name' => $this->first_name,
+                'last_name_kana' => $this->last_name_kana,
+                'first_name_kana' => $this->first_name_kana,
                 'email' => $this->email, 
                 'body' => $this->body
             ],
