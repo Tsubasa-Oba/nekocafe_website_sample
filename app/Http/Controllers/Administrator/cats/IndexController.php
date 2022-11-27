@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Administrator\cats;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Administrator\cats\CatsRequest;
+use Illuminate\Http\Request;
 use App\Models\Cat;
 use Carbon\Carbon;
 
@@ -15,7 +15,7 @@ class IndexController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(CatsRequest $request)
+    public function __invoke(Request $request)
     {
         
         // $cats = Cat::all();

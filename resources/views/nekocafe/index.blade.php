@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猫カフェ にゃんこのおなか</title>
-    @vite(['resources/css/destyle.css', 'resources/css/nekocafeTop.css',  'resources/js/nekocafeMovie.js'])
-
+    <link href="{{ asset('/css/destyle.css' )}}" rel="stylesheet">
+    <link href="{{ asset('/css/nekocafeTop.css' )}}" rel="stylesheet">
 </head>
 <header class="header">
 
     <div class="l_contents">
         <div class="l_container">
             <div class="l_logo">
-                <a href=""><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>  
+                <a href="{{ route('nekocafe.index') }}"><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>  
             </div>      
             <nav class="l_nav_container">
                 <div>
@@ -118,5 +118,15 @@
         </div>
     </div>
 </body>
-@include('nekocafe.common.foot')
+<footer class="footer">
+    <div class="l_contents">
+        <div class="l_container">
+            <div class="l_footer f_footer_text">
+                <a href="{{  route('nekocafe.index') }}"><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>
+                <div>住所：埼玉県所沢市○○○○</div>
+                <div>© 2022 Tsubasa_Oba</div>     
+            </div>                          
+        </div>
+    </div>
+</footer>
 </html>

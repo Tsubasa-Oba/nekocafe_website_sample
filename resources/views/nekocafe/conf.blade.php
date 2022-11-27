@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猫カフェ にゃんこのおなか お問い合わせ確認画面</title>
-    @vite(['resources/css/destyle.css', 'resources/css/nekocafeTop.css', 'resources/css/nekocafeProf.css',  'resources/css/nekocafeForm.css', 'resources/js/nekocafeMovie.js'])
+    <link href="{{ asset('/css/destyle.css' )}}" rel="stylesheet">
+    <link href="{{ asset('/css/nekocafeTop.css' )}}" rel="stylesheet">
+    <link href="{{ asset('/css/nekocafeProf.css' )}}" rel="stylesheet">
+    <link href="{{ asset('/css/nekocafeForm.css' )}}" rel="stylesheet">
 </head>
 @include('nekocafe.common.head')
 

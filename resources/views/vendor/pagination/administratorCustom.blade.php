@@ -1,4 +1,6 @@
-@vite(['resources/css/destyle.css', 'resources/css/nekocafeTop.css', 'resources/css/nekocafePage.css'])
+<link href="{{ asset('/css/destyle.css' )}}" rel="stylesheet">
+<link href="{{ asset('/css/nekocafeTop.css' )}}" rel="stylesheet">
+<link href="{{ asset('/css/nekocafePage.css' )}}" rel="stylesheet">
 @if ($paginator->hasPages())
     <nav>
         <ul class="Pagination">

@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猫カフェ にゃんこのおなか 管理者画面</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-    #btn-layout {
-        display:inline-flex
-      }
-    </style>
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <main class="form-signin">
@@ -20,6 +16,15 @@
                 <h1 class="mb-3 fw-normal text-center">猫プロフィール登録</h1>
                 @if (session('feedback.success'))
                         <p style="color:brown">{{ session('feedback.success') }}</p>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 @endif
                 <div class="mt-2">
                     <form action="{{ $indexViewData['createUrl'] }}" method="post" enctype="multipart/form-data">

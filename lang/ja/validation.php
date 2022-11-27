@@ -156,6 +156,12 @@ return [
     'attributes' => [
         'admin_id' => '管理者ID',
         'admin_pass' => '管理者パスワード',
-    ],
+        'name' => '名前',
+        'birthday' => '誕生日',
+        'Instagram_URL' => 'InstagramのURL',
+        'photo_URL' => 'プロフィール画像',
+        'cats_type' => '猫種',
+        'introduction' => '照会文',
+],
 
 ];

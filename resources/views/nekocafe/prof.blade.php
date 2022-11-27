@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猫カフェ にゃんこのおなか　猫ちゃんプロフィール一覧</title>
-    @vite(['resources/css/destyle.css', 'resources/css/nekocafeTop.css', 'resources/css/nekocafeProf.css',  'resources/js/nekocafeMovie.js'])
+    <link href="{{ asset('/css/destyle.css' )}}" rel="stylesheet">
+    <link href="{{ asset('/css/nekocafeTop.css' )}}" rel="stylesheet">
+    <link href="{{ asset('/css/nekocafeProf.css' )}}" rel="stylesheet">
 </head>
 @include('nekocafe.common.head')
 <body class="l_body">

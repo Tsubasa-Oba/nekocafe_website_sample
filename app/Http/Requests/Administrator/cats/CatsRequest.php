@@ -25,7 +25,12 @@ class CatsRequest extends FormRequest
     public function rules()
     {
         return [
-           
+            'name' => 'required',
+            'birthday' => 'required',
+            'Instagram_URL' => 'required',
+            'photo_URL' => 'required',
+            'cats_type' => 'required|max:20',
+            'introduction' => 'required|max:20',
         ];
     }
 

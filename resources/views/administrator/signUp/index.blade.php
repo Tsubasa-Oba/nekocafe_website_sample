@@ -5,26 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猫カフェ にゃんこのおなか 管理者画面</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-          crossorigin="anonymous">
-          @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-    .required::before {
-        content: "*";
-        font-size: 20px;
-        color: red;
-    }
-
-      #btn-layout {
-        display:inline-flex
-      }
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <main class="form-signin">
-    <h1 class="mb-3 fw-normal text-center">管理者登録</h1>
+    <h1 class="h3 mb-3 fw-normal text-center">管理者登録</h1>
     @if (session('feedback.success'))
             <p style="color:brown">{{ session('feedback.success') }}</p>
     @endif
@@ -58,7 +44,7 @@
     </main>   
     
     <div  class="mt-5 col-lg-6 mx-auto table-responsive">
-    <h2 class="h3 mb-3 fw-normal text-center">管理者一覧</h2>
+    <h1 class="h3 mb-3 fw-normal text-center">管理者一覧</h1>
         <table class="table table-striped table-sm">
             <tr>
                 <th>管理者名</th>
@@ -88,9 +74,6 @@
         
         
     </div> 
-    <div>
-        {{ $indexViewData['allPaginates'] }}
-    </div>
 
 </body>
 </html>
