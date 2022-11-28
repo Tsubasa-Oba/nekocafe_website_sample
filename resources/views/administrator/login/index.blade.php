@@ -13,7 +13,7 @@
 
 <main class="form-signin">
   <form action="{{ $authUrl }}" method="post">
-  <img class="mb-4" src="{{ asset('/storage/site/SiteLogo.png') }}" alt="" width="300">
+  <img class="mb-4" src="{{ asset('/img/SiteLogo.png') }}" alt="" width="300">
     @csrf
     <h1 class="h3 mb-3 fw-normal">管理者ログイン画面</h1>
  
