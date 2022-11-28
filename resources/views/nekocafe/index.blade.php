@@ -13,7 +13,7 @@
     <div class="l_contents">
         <div class="l_container">
             <div class="l_logo">
-                <a href="{{ route('nekocafe.index') }}"><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>  
+                <a href="{{ route('nekocafe.index') }}"><img src="{{ asset('/img/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>  
             </div>      
             <nav class="l_nav_container">
                 <div>
@@ -24,9 +24,9 @@
                     <li><a href="#CONTACT" class="c_text_nav">CONTACT</a></li>
                 </ul>
                 <ul class="p_nav l_nav_btn">
-                    <li><a href="https://twitter.com/nyanko_no_onaka" class="c_btn_nav"><img src="{{ asset('/storage/site/TwitterIcon.png') }}" alt="にゃんこのせなかTwitter"></a></li>
-                    <li><a href="https://www.instagram.com/nyanko_no_onaka" class="c_btn_nav"><img src="{{ asset('/storage/site/InstagramIcon.png') }}" alt="にゃんこのせなかInstagram"></a></li>
-                    <li><a href="" class="c_btn_nav"><img src="{{ asset('/storage/site/YoutubeIcon.png') }}" alt="にゃんこのせなかYoutube"></a></li>
+                    <li><a href="https://twitter.com/nyanko_no_onaka" class="c_btn_nav"><img src="{{ asset('/img/TwitterIcon.png') }}" alt="にゃんこのせなかTwitter"></a></li>
+                    <li><a href="https://www.instagram.com/nyanko_no_onaka" class="c_btn_nav"><img src="{{ asset('/img/InstagramIcon.png') }}" alt="にゃんこのせなかInstagram"></a></li>
+                    <li><a href="" class="c_btn_nav"><img src="{{ asset('/img/YoutubeIcon.png') }}" alt="にゃんこのせなかYoutube"></a></li>
                 </ul>
                 </div>
                
@@ -36,7 +36,7 @@
     <div class="l_contents">
         <div class="l_container">
         <video id="video"  muted autoplay loop>
-        <source src="{{ asset('/storage/site/nyankonoonaka-Top-video.mp4') }}" type="video/mp4">
+        <source src="{{ asset('/img/nyankonoonaka-Top-video.mp4') }}" type="video/mp4">
         <p>動画を再生できる環境ではありません。</p>
         </video>
         </div>
@@ -50,7 +50,7 @@
             <div class="l_img-text  l_concept_img">
                 <div class="l_img">
                     <picture>
-                        <img src="{{ asset('/storage/site/IMG_2043 1.png') }}" alt="猫画像" width="927" height="653">
+                        <img src="{{ asset('/img/IMG_2043 1.png') }}" alt="猫画像" width="927" height="653">
                     </picture>                
                 </div>
                 <div class="l_text">
@@ -80,7 +80,7 @@
                 </div>
                 <div>
                     <picture>
-                        <img src="{{ asset('/storage/site/IMG_2040 1.png') }}" alt="猫画像"  width="900" height="636">
+                        <img src="{{ asset('/img/IMG_2040 1.png') }}" alt="猫画像"  width="900" height="636">
                     </picture>
                 </div>     
             </div>
@@ -122,7 +122,7 @@
     <div class="l_contents">
         <div class="l_container">
             <div class="l_footer f_footer_text">
-                <a href="{{  route('nekocafe.index') }}"><img src="{{ asset('/storage/site/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>
+                <a href="{{  route('nekocafe.index') }}"><img src="{{ asset('/img/SiteLogo.png') }}" alt="にゃんこのせなかロゴ"></a>
                 <div>住所：埼玉県所沢市○○○○</div>
                 <div>© 2022 Tsubasa_Oba</div>     
             </div>                          

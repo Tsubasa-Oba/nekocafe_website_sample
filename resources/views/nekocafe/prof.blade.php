@@ -28,7 +28,7 @@
                             <img src="{{ $catViewData['photo_URL'] }}">
                         </figure>
                         <div>
-                            <a href="{{ $catViewData['Instagram_URL'] }}"><img src="{{ asset('/storage/site/InstagramIcon.png') }}" alt="猫Instagram"></a>
+                            <a href="{{ $catViewData['Instagram_URL'] }}"><img src="{{ asset('/img/InstagramIcon.png') }}" alt="猫Instagram"></a>
                             <a>他の画像はInstagramで！</a>
                         </div>    
                     </div>
