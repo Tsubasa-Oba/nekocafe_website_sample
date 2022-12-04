@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Administrator\cats\Delete;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cat;
-use App\Http\Requests\Administrator\cats\CatsRequest;
+use Illuminate\Http\Request;
 
 class DeleteController extends Controller
 {
@@ -14,7 +14,7 @@ class DeleteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(CatsRequest $request)
+    public function __invoke(Request $request)
     {
         $cat = Cat::where('id', $request->id())->firstOrFail();
         $cat->delete();
