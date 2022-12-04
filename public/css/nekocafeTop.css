@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-
 .header {
     width: 100%;
     background: #DCCFBC;
@@ -12,6 +11,24 @@
 
 .l_container {
    padding: 0px 12rem;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_container {
+      padding: 0px 12rem;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_container {
+      padding: 0px 5rem;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_container {
+      padding: 0px 2rem;
+   }
 }
 
 .l_logo {
@@ -26,13 +43,82 @@
    width: 100%;
 }
 
+@media screen and (min-width : 1025px) {
+   .l_nav_container {
+      padding: 15px 280px;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+   }
+   
+}
+
+@media screen and (max-width : 1024px) {
+   .l_nav_container {
+      padding: 10px 100px;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+   }
+   
+}
+
+@media screen and (max-width : 599px) {
+   .l_nav_container {
+      display: flex;
+      justify-content: center;
+   }
+}
+
 .l_nav_container > div {
    display: flex;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_nav_container > div {
+      display: flex;
+   }   
+}
+
+@media screen and (max-width : 1024px) {
+   .l_nav_container > div {
+      display: flex;
+   }   
+}
+
+@media screen and (max-width : 599px) {
+   .l_nav_container > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
 .p_nav {
    list-style: none;
    font-size: .875rem;
+}
+
+@media screen and (min-width : 1025px) {
+   .p_nav {
+      list-style: none;
+      font-size: .875rem;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .p_nav {
+      list-style: none;
+      font-size: .875rem;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .p_nav {
+      list-style: none;
+      font-size: .875rem;
+      padding: 15px 0px;
+   }
 }
 
 .l_nav_list {
@@ -55,9 +141,42 @@
    margin: 2px 25px;
    font-family: 'Oswald';
    font-weight: 500;
-   font-size: 24px;
-   line-height: 33px;
+   font-size: 2.0rem;
+   line-height: 2.3rem;
    color: #FFFFFF;
+}
+
+@media screen and (min-width : 1025px) {
+   .c_text_nav {
+      margin: 2px 25px;
+      font-family: 'Oswald';
+      font-weight: 500;
+      font-size: 2.0rem;
+      line-height: 2.3rem;
+      color: #FFFFFF;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .c_text_nav {
+      margin: 2px 25px;
+      font-family: 'Oswald';
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: #FFFFFF;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .c_text_nav {
+      margin: 2px 16px;
+      font-family: 'Oswald';
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.5rem;
+      color: #FFFFFF;
+   }
 }
 
 .c_text_nav:hover {
@@ -69,6 +188,33 @@
    justify-content: flex-start;
    width: 100%;
    align-items: center;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_nav_btn {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_nav_btn {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_nav_btn {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+   }
 }
 
 .c_btn_nav {
@@ -101,13 +247,84 @@ h2 {
    color: #107291;
 }
 
-.l_img-text {
-   display: flex;
+@media screen and (min-width : 1025px) {
+   h2 {
+      font-family: 'Oswald';
+      font-weight: 500;
+      font-size: 64px;
+      display: flex;
+      align-items: center;
+      text-align: justify;
+      letter-spacing: -0.05em;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+   
+      color: #107291;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   h2 {
+      font-family: 'Oswald';
+      font-weight: 400;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      text-align: justify;
+      letter-spacing: -0.05em;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+   
+      color: #107291;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   h2 {
+      font-family: 'Oswald';
+      font-weight: 500;
+      font-size: 36px;
+      display: flex;
+      align-items: center;
+      text-align: justify;
+      letter-spacing: -0.05em;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+   
+      color: #107291;
+   }
 }
 
 .l_img-text {
+   display: flex;
    padding-top: 10px;
    position: relative;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_img-text {
+      display: flex;
+      padding-top: 10px;
+      position: relative;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_img-text {
+      display: flex;
+      padding-top: 10px;
+      position: relative;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_img-text {
+      display: flex;
+      padding-top: 10px;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
 .l_img-text::before {
@@ -119,25 +336,238 @@ h2 {
    z-index: -10;
 }
 
-.l_concept_img::before {
-   top: -30px;
-   left: 230px;
+@media screen and (min-width : 1025px) {
+   .l_img-text::before {
+      position: absolute;
+      background-color: #F5EFE4;
+      content: "";
+      width: calc(100% - 12rem);
+      height: 100%;
+      z-index: -10;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_img-text::before {
+      position: absolute;
+      background-color: #F5EFE4;
+      content: "";
+      width: calc(100% - 12rem);
+      height: 100%;
+      z-index: -10;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_img-text::before {
+      position: absolute;
+      background-color: #F5EFE4;
+      content: "";
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+   }
+}
+
+
+.l_img-text div img {
+   max-width: 100%;
+   height: auto;
+}
+
+.l_img {
+   width: 60%;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_img {
+      width: 60%;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_img {
+      width: 60%;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_img {
+      width: 100%;
+   }
+}
+
+.l_map{
+   position:relative;
+   width:70%;
+   height:0;
+   padding-top:40%;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_map{
+      position:relative;
+      width:70%;
+      height:0;
+      padding-top:40%;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_map{
+      position:relative;
+      width:100%;
+      height:0;
+      padding-top:40%;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_map{
+      position:relative;
+      width:100%;
+      height:0;
+      padding-top:60%;
+   }
+}
+
+.l_map iframe{
+   position:absolute;
+   top:0;
+   left:0;
+   width:90%;
+   min-height: 100%;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_map iframe{
+      position:absolute;
+      top:0;
+      left:0;
+      width:90%;
+      min-height: 100%;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_map iframe{
+      position:absolute;
+      top:0;
+      left:0;
+      width:90%;
+      min-height: 100%;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_map iframe{
+      position:absolute;
+      top:0;
+      width:100%;
+      min-height: 100%;
+   }
 }
 
 .l_text {
-   padding-top: 270px;
-   width: 100%;
+   padding-top: 10%;
+   width: 40%;
    display: flex;
    justify-content: space-evenly;   
+}
+
+@media screen and (min-width : 1025px) {
+   .l_text {
+      padding-top: 10%;
+      width: 40%;
+      display: flex;
+      justify-content: space-evenly;   
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_text {
+      padding-top: 10%;
+      width: 60%;
+      display: flex;
+      justify-content: space-evenly;   
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_text {
+      padding: 10% 3%;
+      width: 90%;
+      display: flex;
+      justify-content: space-evenly;   
+   }
 }
 
 .f_text {
    font-family: 'M PLUS 1';
    font-style: normal;
-   font-weight: 300;
-   font-size: 20px;
-   line-height: 33px;
+   font-weight: 200;
+   font-size: 1.2rem;
+   line-height: 2.0rem;
    color: #000000;
+}
+
+@media screen and (min-width : 1025px) {
+   .f_text {
+      font-family: 'M PLUS 1';
+      font-style: normal;
+      font-weight: 200;
+      font-size: 1.2rem;
+      line-height: 2.0rem;
+      color: #000000;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .f_text {
+      font-family: 'M PLUS 1';
+      font-style: normal;
+      font-weight: 200;
+      font-size: 0.875rem;
+      line-height: 1.6rem;
+      color: #000000;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .f_text {
+      font-family: 'M PLUS 1';
+      font-style: normal;
+      font-weight: 200;
+      font-size: 0.875rem;
+      line-height: 1.4rem;
+      color: #000000;
+   }
+}
+
+.l_concept_img::before {
+   top: -30px;
+   left: 230px;
+}
+
+@media screen and (min-width : 1025px) {
+   .l_concept_img::before {
+      top: -30px;
+      left: 230px;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_concept_img::before {
+      top: -30px;
+      left: 230px;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_concept_img::before {
+      top: -5px;
+      left: 0px;
+   }
 }
 
 .l_cats_img::before {
@@ -145,10 +575,54 @@ h2 {
    right: 200px;
 }
 
+@media screen and (min-width : 1025px) {
+   .l_cats_img::before {
+      top: -30px;
+      right: 200px;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_cats_img::before {
+      top: -30px;
+      right: 200px;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_cats_img::before {
+      top: -5px;
+      right: 0px;
+   }
+}
+
+
 .l_access_img::before {
    top: -30px;
    left: 220px;
 }
+
+@media screen and (min-width : 1025px) {
+   .l_access_img::before {
+      top: -30px;
+      left: 220px;
+   }
+}
+
+@media screen and (max-width : 1024px) {
+   .l_access_img::before {
+      top: -30px;
+      left: 220px;
+   }
+}
+
+@media screen and (max-width : 599px) {
+   .l_access_img::before {
+      top: -5px;
+      left: 0px;
+   }
+}
+
 
 .l_text_btn{
    display: flex;
