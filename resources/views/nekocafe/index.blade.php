@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="l_img">
                     <picture>
                         <img src="{{ asset('/img/IMG_2040 1.png') }}" alt="猫画像"  width="900" height="636">
                     </picture>
@@ -92,8 +92,8 @@
         <div class="l_container">
             <div class="l_title" id="ACCESS"><h2>ACCESS</h2></div>
             <div class="l_img-text l_access_img">
-                <div > 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.542147532526!2d139.47103591556098!3d35.7866216317915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e7623f95c7b1%3A0xbd03e3658140ea23!2z5omA5rKi6aeF!5e0!3m2!1sja!2sjp!4v1666444694179!5m2!1sja!2sjp" width="700" height="530" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="l_map"> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.542147532526!2d139.47103591556098!3d35.7866216317915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e7623f95c7b1%3A0xbd03e3658140ea23!2z5omA5rKi6aeF!5e0!3m2!1sja!2sjp!4v1666444694179!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="l_text">
                     <div class="f_text">
