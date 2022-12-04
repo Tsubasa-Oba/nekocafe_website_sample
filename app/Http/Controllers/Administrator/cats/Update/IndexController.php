@@ -16,7 +16,7 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $cat = Cat::where('id', $request->id())->firstOrFail();
+        $cat = Cat::where('id', $request->id)->firstOrFail();
         $catViewData = [
             'name' => $cat->name,
             'birthday' => $cat->birthday,
