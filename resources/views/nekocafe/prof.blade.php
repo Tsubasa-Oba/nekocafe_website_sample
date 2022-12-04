@@ -20,21 +20,22 @@
                     <div class="f_sav_title">猫ちゃんプロフィール一覧</div>
                 </div>
             </div>
-            <div class="l_cats_plof">
+            <div class="l_cats_prof">
                 @foreach($indexViewData['catsViewData'] as $catViewData)
                 <div>
-                <div class="l_cat_plof">
-                    <div class="l_cat_plof_img">
+                <div class="l_cat_prof">
+                    <div class="l_cat_prof_img">
                         <figure>
                             <img src="{{ $catViewData['photo_URL'] }}">
-                        </figure>
-                        <div>
-                            <a href="{{ $catViewData['Instagram_URL'] }}"><img src="{{ asset('/img/InstagramIcon.png') }}" alt="猫Instagram"></a>
-                            <a>他の画像はInstagramで！</a>
-                        </div>    
+                        </figure>  
                     </div>
-                    <div class="l_cat_plof_text f_cat_plof_text">
-                        <h3>{{ $catViewData['name'] }}</h2>
+                    <div class="l_cat_prof_text f_cat_prof_text">
+                        <div class="l_cat_prof_name_icon">
+                            <h3>{{ $catViewData['name'] }}</h3>
+                            <div>
+                                <a href="{{ $catViewData['Instagram_URL'] }}"><img src="{{ asset('/img/InstagramIcon.png') }}" alt="猫Instagram"></a>
+                            </div>      
+                        </div>
                         <p>{{ $catViewData['birthday'] }} 生まれ</p>
                         <p>猫種：{{ $catViewData['cats_type'] }}</p>
                         <p>紹介文：{{ $catViewData['introduction'] }}</p>           
