@@ -16,7 +16,7 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $admin = Admin::where('id', $request->id())->firstOrFail();
+        $admin = Admin::where('id', $request->id)->firstOrFail();
         $adminViewData = [
             'name' => $admin->name,
             'admin_id' => $admin->admin_id,

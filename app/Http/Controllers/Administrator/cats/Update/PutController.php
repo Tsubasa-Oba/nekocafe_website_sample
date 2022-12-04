@@ -19,7 +19,7 @@ class PutController extends Controller
      */    
     public function __invoke(Request $request)
     {
-        $cat = Cat::where('id', $request->id())->firstOrFail();
+        $cat = Cat::where('id', $request->id)->firstOrFail();
 
         DB::transaction( function () use($request, $cat) {
             $cat->name = $request->input('name');

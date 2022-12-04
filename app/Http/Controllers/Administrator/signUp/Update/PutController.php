@@ -19,7 +19,7 @@ class PutController extends Controller
      */    
     public function __invoke(Request $request)
     {
-        $admin = Admin::where('id', $request->id())->firstOrFail();
+        $admin = Admin::where('id', $request->id)->firstOrFail();
 
         DB::transaction( function () use($request, $admin) {
             $admin->name = $request->input('name');

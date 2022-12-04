@@ -16,7 +16,7 @@ class DeleteController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $admin = Admin::where('id', $request->id())->firstOrFail();
+        $admin = Admin::where('id', $request->id)->firstOrFail();
         $admin->delete();
         return redirect()->route('administrator.signUp.index')
         ->with('feedback.success', "プロフィールを削除しました");
